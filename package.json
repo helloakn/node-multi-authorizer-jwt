@@ -1,0 +1,53 @@
+{
+    "name": "API",
+    "version": "1.0.0",
+    "description": "Multiple Authorizer in Nodejs JWT",
+    "main": "app.js",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.0",
+      "express": "^4.17.3"
+    },
+    "exports": {
+      "./config": "./sc/lib/config.js",
+      "./routeGenerator": "./sc/lib/route-generator.js",
+      "./functions/*": "./sc/functions/*.function.js"
+    },
+    "scripts": {
+      "dev": " node server.js",
+      "test": "jest --forceExit --detectOpenHandles --watch",
+      "test-watch": "npm run test -- --watch"
+    },
+    "keywords": [
+      "Multiple Authorizer in Nodejs JWT"
+    ],
+    "author": "Aung Kyaw Nyunt",
+    "license": "ISC",
+    "jest": {
+      "verbose": true,
+      "preset": "ts-jest",
+      "testEnvironment": "node",
+      "transform": {
+        "^.+\\.ts?$": "ts-jest"
+      },
+      "transformIgnorePatterns": ["./node_modules/"],
+      "moduleFileExtensions": ["js", "json", "es6"],
+      "moduleNameMapper": {
+        "./config": "<rootDir>/lib/config.js",
+        "./routeGenerator": "<rootDir>/sc/lib/route-generator.js",
+        "^API/functions/(.+)$": "<rootDir>/sc/functions/$1.function.js",
+        "^API/Testing/(.+)$": "<rootDir>/sc/_test_/$1.test.js"
+      }
+    },
+    "devDependencies": {
+      "@types/jest": "^27.4.1",
+      "@types/node": "^17.0.29",
+      "@types/supertest": "^2.0.12",
+      "jest": "^27.5.1",
+      "supertest": "^6.2.3",
+      "ts-jest": "^27.1.4",
+      "ts-node": "^10.7.0",
+      "typescript": "^4.6.4"
+    }
+  }
+  
