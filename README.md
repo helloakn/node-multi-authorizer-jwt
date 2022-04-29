@@ -10,6 +10,7 @@ Multiple Authorization in Nodejs JWT
 
 ## Table of Contents
 - File Structure
+- Npm Dependences
 - Installation
 - Run
 - Test
@@ -26,6 +27,13 @@ Multiple Authorization in Nodejs JWT
 ├── resources                   # for documentations resources
 ├── README.md              
 └── ...
+```
+### Npm Dependences
+```
+[cors](https://www.npmjs.com/package/cors)         : ^2.8.5    # for api cors allown and deny
+[dotenv](https://www.npmjs.com/package/dotenv)       : ^16.0.0   # to load environment variable from .env file or sys environment variable
+[express](https://www.npmjs.com/package/express)      : ^5.0.6    # for web app
+[sqlite3](https://www.npmjs.com/package/sqlite3) : to use as local storage
 ```
 ### Installation
 ```shell
