@@ -2,8 +2,9 @@
 This is for coding test.  
 Multiple Authorization in Nodejs JWT
 
-[![NodeJs](https://img.shields.io/badge/nodejs-v16.14.2-green)](https://github.com/helloakn/nodejs-express-business-days-calculator) 
-[![Express](https://img.shields.io/badge/express-v^4.17.3-green)](https://github.com/helloakn/nodejs-express-business-days-calculator) 
+[![NodeJs](https://img.shields.io/badge/nodejs-v16.14.2-green)](https://github.com/helloakn/node-multi-authorizer-jwt) 
+[![NPM](https://img.shields.io/badge/npm-v8.5.0-green)](https://github.com/helloakn/node-multi-authorizer-jwt) 
+[![Express](https://img.shields.io/badge/express-v^4.17.3-green)](https://github.com/helloakn/node-multi-authorizer-jwt) 
 
 ## Table of Contents
 - File Structure
@@ -14,13 +15,13 @@ Multiple Authorization in Nodejs JWT
 ### File Structure
 ```nth
 .
-├── application                 # nodejs source code
-│   └── functions               # for the common functions
+├── sc                          # nodejs source code
+│   └── common                  # for the common functions
 │   ├── lib                     # just for system configuration files
 │   ├── routes                  # urls and prefixs
 │   └── services                # Controllers , we can deploy them to AWS Lambda functions
-│   └── tests                   # unit test and api test
-├── documentations              # for documentations resources
+├── tests                       # unit test and api test
+├── resources                   # for documentations resources
 ├── README.md              
 └── ...
 ```
