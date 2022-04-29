@@ -16,13 +16,21 @@ Multiple Authorization in Nodejs JWT
 - Test
 
 ### File Structure
+Structure is base on lambda functions.  
+So we can easy to deploy to lambda or ECS or EC2 as the monolith or microservice.  
+We can separate authorizer and functions too.
 ```nth
 .
 ├── sc                          # nodejs source code
 │   └── common                  # for the common functions
 │   ├── lib                     # just for system configuration files
 │   ├── routes                  # urls and prefixs
+│       └── ...
 │   └── services                # Controllers , we can deploy them to AWS Lambda functions
+│       └── admin               # For all admin functions
+│           └── ...
+│       └── user                # For all user functions
+│           └── ...
 ├── tests                       # unit test and api test
 ├── resources                   # for documentations resources
 ├── README.md              
