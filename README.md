@@ -17,8 +17,9 @@ Multiple Authorization in Nodejs JWT
 
 ### File Structure
 Structure is base on lambda functions.  
-So we can easy to deploy to lambda or ECS or EC2 as the monolith or microservice.  
-We can separate authorizer and functions too.
+So we can easily deploy to lambda or ECS or EC2 as the monolith or microservice.  
+We can separate authorizer and functions too.  
+All the services on our code would be functions in Lambda and middleware will be lambda Authorizer as well as all the others are the layers.
 ```nth
 .
 ├── sc                          # nodejs source code
