@@ -30,10 +30,10 @@ Multiple Authorization in Nodejs JWT
 ```
 ### Npm Dependences
 ```
-[cors](https://www.npmjs.com/package/cors)         : ^2.8.5    # for api cors allown and deny
-[dotenv](https://www.npmjs.com/package/dotenv)       : ^16.0.0   # to load environment variable from .env file or sys environment variable
-[express](https://www.npmjs.com/package/express)      : ^5.0.6    # for web app
-[sqlite3](https://www.npmjs.com/package/sqlite3) : to use as local storage
+* [cors](https://www.npmjs.com/package/cors)         : ^2.8.5 - for api cors allown and deny
+* [dotenv](https://www.npmjs.com/package/dotenv)       : ^16.0.0 - to load environment variable from .env file or sys environment variable
+* [express](https://www.npmjs.com/package/express)      : ^4.18.1 - for web app
+* [sqlite3](https://www.npmjs.com/package/sqlite3) : 5.0.6 - to use as local storage
 ```
 ### Installation
 ```shell
