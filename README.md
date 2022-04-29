@@ -55,7 +55,7 @@ Configuration is just for dev(local) only. we can easily execute our program in 
 npm run dev
 ```
 ## Test
-I use jest and supertest npm package for testing. main program is base on commajs and jest is base on model type. however we can run and test our program because i have configured in package.json. You can check the testing source code in *./tests* directory too. 
+I use jest and supertest npm package for testing. main program is base on commajs and jest is base on model type. however we can run and test our program because i have configured in package.json. You can check the testing source code in [./test](./test) directory too. 
 Here is the command to run the testing.
 ```shell
 npm test
