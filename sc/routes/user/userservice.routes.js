@@ -6,19 +6,19 @@ module.exports = {
             "method" : 'post',
             "endPoint" : "sign-up",
             "function":"signup",
-            "authorization" : null,
+            "authorizer" : null,
         },
         {
             "method" : 'post',
             "endPoint" : "sign-in",
             "function":"signin",
-            "authorization" : null,
+            "authorizer" : null,
         },
         {
             "method" : 'post',
             "endPoint" : "helloworld",
             "function":"helloworld",
-            "authorization" : null,
+            "authorizer" : null,
         }
     ]
 

@@ -1,24 +1,24 @@
 module.exports = {
     "name":"admin",
-    "prefix":"",
+    "prefix":"admin",
     "functionList":[
         {
             "method" : 'post',
             "endPoint" : "sign-up",
-            "function":"signup",
-            "authorization" : null,
+            "function":"admin.signup",
+            "authorizer" : null,
         },
         {
             "method" : 'post',
             "endPoint" : "sign-in",
             "function":"signin",
-            "authorization" : null,
+            "authorizer" : null,
         },
         {
             "method" : 'post',
             "endPoint" : "helloworld",
-            "function":"helloworld",
-            "authorization" : null,
+            "function":"admin.helloworld",
+            "authorizer" : null,
         }
     ]
 
