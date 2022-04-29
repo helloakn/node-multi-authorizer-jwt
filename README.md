@@ -45,21 +45,19 @@ All the services on our code would be functions in Lambda and middleware will be
 * [sqlite3](https://www.npmjs.com/package/sqlite3) : 5.0.6 - to use as local storage  
 
 ### Installation
+We have to install npm dependence to run our program smoothly. pls follow as the singlie line of  the following command.
 ```shell
-cd application
 npm install
-cd ../
 ```
 ## Run
+Configuration is just for dev(local) only. we can easily execute our program in local as the following command.
 ```shell
-cd application
 npm run dev
-cd ../
 ```
 ## Test
+I use jest and supertest npm package for testing. main program is base on commajs and jest is base on model type. however we can run and test our program because i have configured in package.json. You can check the testing source code in *./tests* directory too. 
+Here is the command to run the testing.
 ```shell
-cd application
 npm test
-cd ../
 ```
-![alt text](documentations/unit.test.ss.png)
+![alt text](resources/unit.test.ss.png)
