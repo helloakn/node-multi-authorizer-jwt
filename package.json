@@ -10,7 +10,7 @@
     },
     "exports": {
       "./config": "./sc/lib/config.js",
-      "./routeGenerator": "./sc/lib/route-generator.js",
+      "./routeGenerator": "./sc/common/route-generator.js",
       "./functions/*": "./sc/functions/*.function.js"
     },
     "scripts": {

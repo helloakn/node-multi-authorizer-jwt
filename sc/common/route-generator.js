@@ -26,9 +26,6 @@ module.exports =  (_app,_serviceList) => {
     }
     handler = async(req,res)=>{
         let response;
-        
-
-        
         if(typeof(req.functionName) === 'function'){
             response = await req.functionName();
         }
@@ -52,7 +49,7 @@ module.exports =  (_app,_serviceList) => {
             
             let service = route.service;
             service.functionList.forEach(fun=>{
-                let routePrefix = `/${route.prefix?route.prefix+"/":""}${service.name}`;
+                let routePrefix = `/${route.prefix?route.prefix+"/":""}${service.prefix}`;
                 _app.prefix(routePrefix, function (router) {
                     //console.log(routePrefix+"/"+fun.endPoint)
                     switch(fun.method){
@@ -64,7 +61,7 @@ module.exports =  (_app,_serviceList) => {
                             break;
                         case 'get':
                             //console.log('service name',service.name+'/'fun.function)
-                            router.route("/"+fun.endPoint).post(
+                            router.route("/"+fun.endPoint).get(
                                 middleware(fun.authorizer,service.name,fun.function),
                                 handler
                             );
