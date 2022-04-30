@@ -5,7 +5,8 @@ Multiple Authorization in Nodejs JWT
 [![NodeJs](https://img.shields.io/badge/nodejs-v16.14.2-green)](https://github.com/helloakn/node-multi-authorizer-jwt) 
 [![NPM](https://img.shields.io/badge/npm-v8.5.0-green)](https://github.com/helloakn/node-multi-authorizer-jwt) 
 [![Express](https://img.shields.io/badge/express-v^4.17.3-green)](https://github.com/helloakn/node-multi-authorizer-jwt) 
-[![Language](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Language&query=language&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fhelloakn%2Fapi-authorization-nodejs-mysql)](https://github.com/helloakn/api-authorization-nodejs-mysql)
+[![Language](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Language&query=language&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fhelloakn%2Fnode-multi-authorizer-jwt)](https://github.com/helloakn/api-authorization-nodejs-mysql)
+[![Star Count](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Star&query=stargazers_count&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fhelloakn%2Fnode-multi-authorizer-jwt)]
 
 
 ## Table of Contents
@@ -37,7 +38,7 @@ All the services on our code would be functions in Lambda and middleware will be
 ├── README.md              
 └── ...
 ```
-### Npm Dependences
+### npm Dependences
 
 * [cors](https://www.npmjs.com/package/cors)         : ^2.8.5 - for api cors allown and deny
 * [dotenv](https://www.npmjs.com/package/dotenv)       : ^16.0.0 - to load environment variable from .env file or sys environment variable
