@@ -19,7 +19,7 @@ module.exports = AdminMiddleware =(req, res, next)=>{
     
     req.authType = auth.authType;
     req.adminAccount = auth.adminAccount;
-    console.log(auth.adminAccount);
+    //console.log(auth.adminAccount);
     next();
 
     });

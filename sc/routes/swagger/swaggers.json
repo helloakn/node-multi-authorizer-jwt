@@ -1,0 +1,83 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": ".:: Coding Test ::.",
+      "description": "Multiple Authorizers JWT",
+      "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "paths": {
+      "tag":["haha"],
+      "/api/admin/sign-up": {
+        "post": {
+          "x-swagger-router-controller": "home",
+          "operationId": "indxxex",
+          "tags": ["Admin SignUp"],
+          "parameters": [
+            { "name": "name", "in": "formData", "required": true, "type": "string" },
+            { "name": "email", "in": "formData", "required": true, "type":"string"},
+            { "name": "password", "in": "formData", "required": true, "type":"string"}
+          ],
+          "responses": {}
+        }
+      },
+      "/api/admin/sign-in": {
+        "post": {
+          "x-swagger-router-controller": "home",
+          "operationId": "index",
+          "tags": ["Admin SignIn"],
+          "parameters": [
+            { "name": "email", "in": "formData", "required": true, "type":"string"},
+            { "name": "password", "in": "formData", "required": true, "type":"string"}
+          ],
+          "responses": {}
+        }
+      },
+      "/api/admin/helloworld": {
+        "get": {
+          "operationId": "index",
+          "tags": ["Admin HelloWorld"],
+          "parameters": [
+            { "name": "x-access-token", "in": "header", "description":"authorizatio header." ,"required": true, "type":"string"}
+          ],
+          "responses": {}
+        }
+      },
+      "/api/user/sign-up": {
+        "post": {
+          "x-swagger-router-controller": "home",
+          "operationId": "indxxex",
+          "tags": ["User SignUp"],
+          "parameters": [
+            { "name": "name", "in": "formData", "required": true, "type": "string" },
+            { "name": "email", "in": "formData", "required": true, "type":"string"},
+            { "name": "password", "in": "formData", "required": true, "type":"string"}
+          ],
+          "responses": {}
+        }
+      },
+      "/api/user/sign-in": {
+        "post": {
+          "x-swagger-router-controller": "home",
+          "operationId": "index",
+          "tags": ["User SignIn"],
+          "parameters": [
+            { "name": "email", "in": "formData", "required": true, "type":"string"},
+            { "name": "password", "in": "formData", "required": true, "type":"string"}
+          ],
+          "responses": {}
+        }
+      },
+      "/api/user/helloworld": {
+        "get": {
+          "operationId": "index",
+          "tags": ["User HelloWorld"],
+          "parameters": [
+            { "name": "x-access-token", "in": "header", "description":"authorizatio header." ,"required": true, "type":"string"}
+          ],
+          "responses": {}
+        }
+      }
+
+    }
+ }

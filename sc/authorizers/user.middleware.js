@@ -19,7 +19,7 @@ module.exports = UserMiddleware =(req, res, next)=>{
     
     req.authType = auth.authType;
     req.userAccount = auth.userAccount;
-    console.log(auth.userAccount);
+    //console.log(auth.userAccount);
     next();
 
     });

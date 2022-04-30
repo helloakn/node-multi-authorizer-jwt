@@ -4,6 +4,7 @@ module.exports = {
     "prefix":"",
     "functionList":[
         {
+            /* heal/check page */
             "method": "get",
             "endPoint" : "health/check",
             "function":(res,req,next)=>{
@@ -15,22 +16,12 @@ module.exports = {
             "authorization" : null
         },
         {
-            "method": "get",
-            "endPoint" : "page/404",
-            "function":(res,req,next)=>{
-                return {
-                    statusCode: StatusCodes.Ok,
-                    body:{"message":"Request URL not found"}
-                }
-            },
-            "authorization" : null
-        },
-        {
+            /* 404 page */
             "method": "get",
             "endPoint" : "*",
             "function":(res,req,next)=>{
                 return {
-                    statusCode: StatusCodes.Ok,
+                    statusCode: StatusCodes.NotFound,
                     body:{"message":"Request URL not found"}
                 }
             },

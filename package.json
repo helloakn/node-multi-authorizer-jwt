@@ -9,7 +9,9 @@
         "dotenv": "^16.0.0",
         "express": "^4.17.3",
         "jsonwebtoken": "^8.5.1",
-        "sqlite3": "^5.0.6"
+        "sqlite3": "^5.0.6",
+        "swagger-jsdoc": "^6.2.1",
+        "swagger-ui-express": "^4.3.0"
     },
     "exports": {
         "./config": "./sc/lib/config.js",
@@ -46,10 +48,13 @@
             "es6"
         ],
         "moduleNameMapper": {
-            "./config": "<rootDir>/lib/config.js",
-            "./routeGenerator": "<rootDir>/sc/lib/route-generator.js",
-            "^API/functions/(.+)$": "<rootDir>/sc/functions/$1.function.js",
-            "^API/Testing/(.+)$": "<rootDir>/sc/_test_/$1.test.js"
+            "./config": "<rootDir>/sc/lib/config.js",
+            "./database": "<rootDir>/sc/common/database.js",
+            "./routeGenerator": "<rootDir>/sc/common/route-generator.js",
+            "./models/(.+)$": "<rootDir>/sc/models/$1.model.js",
+            "./middlewares/(.+)$": "<rootDir>/sc/authorizers/$1.middleware.js",
+            "^API/functions/(.+)$": "<rootDir>/sc/common/$1.function.js",
+            "^API/testing/(.+)$": "<rootDir>/sc/_test_/$1.test.js"
         }
     },
     "devDependencies": {

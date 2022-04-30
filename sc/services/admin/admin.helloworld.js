@@ -9,7 +9,7 @@ const AdminModel = require('API/models/admin');
 exports.handler = async (event,callback) => {
 
         let acc = event.adminAccount;
-        console.log('acc',acc)
+        //console.log('acc',acc)
         let msg = `Hello ${acc.name}. How are you?`;
         return {
             statusCode:StatusCodes.Ok,

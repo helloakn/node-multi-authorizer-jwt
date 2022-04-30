@@ -9,6 +9,7 @@ module.exports = app => {
         });
         res.status(err.statusCode).send(err.statusCode==404?"not Found url":err.statusCode)
     });
+
     /* end 500 / 404  Page Handler*/
 
     let serviceList = [];
@@ -28,7 +29,6 @@ module.exports = app => {
             service: require("./default.routes.js")
         }
     );
-
-   require('API/routeGenerator')(app,serviceList);
-
+    require('./swagger/swagger.routes.js')(app);
+    require('API/routeGenerator')(app,serviceList);
 }

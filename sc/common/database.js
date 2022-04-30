@@ -2,12 +2,11 @@
 var sqlite3 = require('sqlite3');
 
 const {DatabaseConfig} = require('API/config');
-console.log('init db')
 const SQL = new sqlite3.Database(DatabaseConfig.filePath, (err) => {
     if (err) {
-      console.log('Could not connect to database', err)
+     // console.log('Could not connect to database', err)
     } else {
-      console.log('Connected to database')
+     // console.log('Connected to database')
     }
 });
 

@@ -27,7 +27,7 @@ exports.handler = async (event,callback) => {
             .customFunction(async v=>{
                if(formData.email){
                     let acc = await tblUser.findByEmail(formData.email);
-                    console.log('acc',acc)
+                    //console.log('acc',acc)
                     if(acc){
                         v.setError("Account already existed with this email.");
                     }

@@ -30,7 +30,7 @@ module.exports =  (_app,_serviceList) => {
             response = await controller.handler(req);
             
         }
-        console.log('console',response)
+       // console.log('console',response)
         res.set(response.headers||{
             "Content-Type": "application/json",
             "X-Powered-By": "-"
