@@ -1,24 +1,26 @@
+
+const UserMiddleware = require('API/middlewares/user');
 module.exports = {
-    "name":"admin",
-    "prefix":"",
+    "name":"user",
+    "prefix":"user",
     "functionList":[
         {
             "method" : 'post',
             "endPoint" : "sign-up",
-            "function":"signup",
+            "function":"user.signup",
             "authorizer" : null,
         },
         {
             "method" : 'post',
             "endPoint" : "sign-in",
-            "function":"signin",
+            "function":"user.signin",
             "authorizer" : null,
         },
         {
-            "method" : 'post',
+            "method" : 'get',
             "endPoint" : "helloworld",
-            "function":"helloworld",
-            "authorizer" : null,
+            "function":"user.helloworld",
+            "authorizer" : UserMiddleware,
         }
     ]
 

@@ -1,8 +1,15 @@
 require('dotenv').config();
 module.exports = { 
+    DatabaseConfig:{
+        'filePath' : './data/codetest.sqlite3'
+    },
     ServerConfig:{
         PORT:process.env.PORT || 9999,
         allowFrom:process.env.allowFrom || "*"
+    },
+    JKey:{
+        admin:"UIjHT^&*tyUHT^&*IKHUIHT&*UJHT^&3UJTYUIjHT^&*IKHU7IHyhT&*UJHT4^&UJTYUIjHT^&*tyUIKGT&",
+        user:"UyUT&*UJ6IjHT^&*tUIHHcT^&UJTYUIjHT^3&*IKHU5I8HyhT&*3UJcHT^&UJTYUIjHT^&*5tyUIKGT&",
     },
     Path:{
         services: '../'

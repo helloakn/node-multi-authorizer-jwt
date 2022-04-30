@@ -5,21 +5,15 @@ module.exports =  (_app,_serviceList) => {
    
     middleware =(_authorizer,_serviceName,_functionName)=>{
         return async(req, res, next)=> {
-             
+            req.serviceName = _serviceName;
+            req.functionName = _functionName;
              if(_authorizer==undefined){
-                 req.serviceName = _serviceName;
-                 req.functionName = _functionName;
+                 
                  return next();
              }
              else{
-                let status = await _authorizer();
-                if(status.isAuth()){
-                    req.token = status.token;
-                    res.status(response.statusCode||StatusCodes.ok).send(response.body||{});
-                }
-                else{
-                    res.status(StatusCodes.UnAuthorize).send({});
-                }
+
+                return await _authorizer(req,res,next);
              }
              
          }
@@ -36,9 +30,10 @@ module.exports =  (_app,_serviceList) => {
             response = await controller.handler(req);
             
         }
+        console.log('console',response)
         res.set(response.headers||{
             "Content-Type": "application/json",
-            "X-Powered-By": "sat su tal nor"
+            "X-Powered-By": "-"
         });
 
         return res.status(response.statusCode||StatusCodes.ok).send(response.body||{});

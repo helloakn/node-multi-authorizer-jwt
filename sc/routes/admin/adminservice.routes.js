@@ -1,3 +1,5 @@
+
+const AdminMiddleware = require('API/middlewares/admin');
 module.exports = {
     "name":"admin",
     "prefix":"admin",
@@ -11,14 +13,14 @@ module.exports = {
         {
             "method" : 'post',
             "endPoint" : "sign-in",
-            "function":"signin",
+            "function":"admin.signin",
             "authorizer" : null,
         },
         {
-            "method" : 'post',
+            "method" : 'get',
             "endPoint" : "helloworld",
             "function":"admin.helloworld",
-            "authorizer" : null,
+            "authorizer" : AdminMiddleware,
         }
     ]
 

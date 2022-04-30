@@ -5,17 +5,23 @@
     "main": "app.js",
     "dependencies": {
         "cors": "^2.8.5",
+        "crypto": "^1.0.1",
         "dotenv": "^16.0.0",
         "express": "^4.17.3",
+        "jsonwebtoken": "^8.5.1",
         "sqlite3": "^5.0.6"
     },
     "exports": {
         "./config": "./sc/lib/config.js",
+        "./database": "./sc/common/database.js",
+        "./models/*": "./sc/models/*.model.js",
         "./routeGenerator": "./sc/common/route-generator.js",
-        "./functions/*": "./sc/common/*.function.js"
+        "./functions/*": "./sc/common/*.function.js",
+        "./middlewares/*": "./sc/authorizers/*.middleware.js"
     },
     "scripts": {
-        "dev": " node server.js",
+        "migrate": " node migrate.js",
+        "dev": "npm run migrate && node server.js",
         "test": "jest --forceExit --detectOpenHandles --watch",
         "test-watch": "npm run test -- --watch"
     },

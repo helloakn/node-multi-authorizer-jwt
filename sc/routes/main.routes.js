@@ -1,12 +1,12 @@
+
+
 module.exports = app => {
     /* 500 /404 Page Handler */
-    console.log('hello')
     app.use((err, req, res, next) => {
         res.set({
             "Content-Type": "application/json",
             "X-Powered-By": "-"
         });
-        console.log(err)
         res.status(err.statusCode).send(err.statusCode==404?"not Found url":err.statusCode)
     });
     /* end 500 / 404  Page Handler*/
