@@ -61,4 +61,4 @@ Here is the command to run the testing.
 ```shell
 npm test
 ```
-![alt text](resources/unit.test.ss.png)
+![alt text](resources/test.png)
