@@ -11,7 +11,7 @@ Multiple Authorization in Nodejs JWT
 
 ## Table of Contents
 - File Structure
-- Npm Dependences
+- npm Dependences
 - Installation
 - Run
 - Test
@@ -45,7 +45,13 @@ All the services on our code would be functions in Lambda and middleware will be
 * [cors](https://www.npmjs.com/package/cors) ^2.8.5 - for api cors allown and deny
 * [dotenv](https://www.npmjs.com/package/dotenv) ^16.0.0 - to load environment variable from .env file or sys environment variable
 * [express](https://www.npmjs.com/package/express) ^4.18.1 - for web app
-* [sqlite3](https://www.npmjs.com/package/sqlite3)  5.0.6 - to use as local storage  
+* [sqlite3](https://www.npmjs.com/package/sqlite3)  ^5.0.6 - to use as local storage  
+* [md5](https://www.npmjs.com/package/md5)  ^2.3.0 - for one way password hex 
+* [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)  ^8.5.1 - JWT  
+* [swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc)  ^6.2.1 - for api doc 
+* [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)  ^4.3.0 - express api doc
+* [jest](https://www.npmjs.com/package/jest)  ^28.0.3 - for unit testing
+* [supertest](https://www.npmjs.com/package/supertest)  ^6.2.3 - for api testing 
 
 ### Installation
 We have to install npm dependence to run our program smoothly. pls follow as the singlie line of  the following command.
