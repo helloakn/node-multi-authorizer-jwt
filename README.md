@@ -12,9 +12,9 @@ Multiple Authorization in Nodejs JWT
 ## Table of Contents
 - File Structure
 - npm Dependences
-- Installation
-- Run
-- Test
+- How to Install
+- How to Run
+- How to Test
 - Swagger
 
 ### File Structure
@@ -54,19 +54,19 @@ All the services on our code would be functions in Lambda and middleware will be
 * [jest](https://www.npmjs.com/package/jest)  ^28.0.3 - for unit testing
 * [supertest](https://www.npmjs.com/package/supertest)  ^6.2.3 - for api testing 
 
-### Installation
+### How to install
 We have to install npm dependence to run our program smoothly. pls follow as the singlie line of  the following command.
 ```shell
 npm install
 ```
 ![alt text](resources/install.png)  
 
-## Run
+## How to Run
 Configuration is just for dev(local) only. we can easily execute our program in local as the following command.
 ```shell
 npm run dev
 ```
-## Test
+## How to Test
 I use jest and supertest npm package for testing. main program is base on commajs and jest is base on model type. however we can run and test our program because i have configured in package.json. You can check the testing source code in [./test](https://github.com/helloakn/node-multi-authorizer-jwt/tree/main/tests) directory too. 
 Here is the command to run the testing.
 ```shell
@@ -75,6 +75,12 @@ npm test
 ![alt text](resources/test.png)  
 
 ## Swagger
-W
+we can accept our swagger from this link...  
+[Link](http://localhost:9999/swagger/)  API Doc swagger  
+We can test the api ourselves.
 
 ![alt text](resources/swagger.png) 
+
+## Acknowledgement
+Thank you all for giving me a chance to answer the coding test.  
+I'm looking forward to work with you and I could make a promise that " I would do my best ".
