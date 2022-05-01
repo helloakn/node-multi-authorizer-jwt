@@ -23,8 +23,10 @@ We can separate authorizer and functions too.
 All the services on our code would be functions in Lambda and middleware will be lambda Authorizer as well as all the others are the layers.
 ```nth
 .
+├── data                        # dir for sqlite3 database
+|   └── codetest.sqlite3        # sqlite3 db file
 ├── sc                          # nodejs source code
-│   └── common                  # for the common functions
+│   ├── common                  # for the common functions
 │   ├── lib                     # just for system configuration files
 │   ├── routes                  # urls and prefixs
 │   │   └── ...
@@ -33,17 +35,17 @@ All the services on our code would be functions in Lambda and middleware will be
 │       │   └── ...
 │       └── user                # For all user functions
 │           └── ...
-├── tests                       # unit test and api test
+├── tests                       # api test
 ├── resources                   # for documentations resources
 ├── README.md              
 └── ...
 ```
 ### npm Dependences
 
-* [cors](https://www.npmjs.com/package/cors)         : ^2.8.5 - for api cors allown and deny
-* [dotenv](https://www.npmjs.com/package/dotenv)       : ^16.0.0 - to load environment variable from .env file or sys environment variable
-* [express](https://www.npmjs.com/package/express)      : ^4.18.1 - for web app
-* [sqlite3](https://www.npmjs.com/package/sqlite3) : 5.0.6 - to use as local storage  
+* [cors](https://www.npmjs.com/package/cors) ^2.8.5 - for api cors allown and deny
+* [dotenv](https://www.npmjs.com/package/dotenv) ^16.0.0 - to load environment variable from .env file or sys environment variable
+* [express](https://www.npmjs.com/package/express) ^4.18.1 - for web app
+* [sqlite3](https://www.npmjs.com/package/sqlite3)  5.0.6 - to use as local storage  
 
 ### Installation
 We have to install npm dependence to run our program smoothly. pls follow as the singlie line of  the following command.
