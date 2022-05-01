@@ -1,6 +1,6 @@
 // program base on aws lambda function style
 "use strict";
-const crypto = require('crypto');
+const md5 = require('md5');
 const jwt = require('jsonwebtoken');
 
 const {StatusCodes,JKey} = require('API/config');
@@ -31,7 +31,7 @@ exports.handler = async (event,callback) => {
         };
     }
     else{
-        let passwdHex = crypto.createHash('md5').update(formData.password).digest("hex");
+        let passwdHex =  md5(formData.password);
         
         let acc = await tblAdmin.findByEmailPassword(formData.email,passwdHex);
         

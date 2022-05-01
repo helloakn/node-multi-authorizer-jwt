@@ -1,6 +1,6 @@
 // program base on aws lambda function style
 "use strict";
-const crypto = require('crypto');
+const md5 = require('md5');
 
 const {StatusCodes} = require('API/config');
 const Validator = require('API/functions/validator');
@@ -43,7 +43,7 @@ exports.handler = async (event,callback) => {
         };
     }
     else{
-        let passwdHex = crypto.createHash('md5').update(formData.password).digest("hex");
+        let passwdHex = md5(formData.password);
         
         await tblAdmin.insertData({
             name : formData.name,
