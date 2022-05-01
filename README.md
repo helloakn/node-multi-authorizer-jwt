@@ -16,6 +16,7 @@ Multiple Authorization in Nodejs JWT
 - How to Run
 - How to Test
 - Swagger
+- Acknowledgement
 
 ### File Structure
 Structure is base on lambda functions.  
@@ -26,9 +27,17 @@ All the services on our code would be functions in Lambda and middleware will be
 .
 ├── data                        # dir for sqlite3 database
 |   └── codetest.sqlite3        # sqlite3 db file
+├── resources                   # for documentations resources
+│   └── ...
 ├── sc                          # nodejs source code
+│   ├── authorizers             # administrator and customer middlewares
+│   │   └── ...                 
 │   ├── common                  # for the common functions
+│   │   └── ...
 │   ├── lib                     # just for system configuration files
+│   │   └── ...
+│   ├── models                  # tables
+│   │   └── ...
 │   ├── routes                  # urls and prefixs
 │   │   └── ...
 │   └── services                # Controllers , we can deploy them to AWS Lambda functions
@@ -37,7 +46,7 @@ All the services on our code would be functions in Lambda and middleware will be
 │       └── user                # For all user functions
 │           └── ...
 ├── tests                       # api test
-├── resources                   # for documentations resources
+│   └── ...
 ├── README.md              
 └── ...
 ```
