@@ -76,7 +76,7 @@ npm test
 
 ## Swagger
 we can accept our swagger from this link...  
-[Link](http://localhost:9999/swagger/)  API Doc swagger  
+[Link](http://localhost:9999/swagger/)  API Doc swagger -> http://localhost:9999/swagger/ 
 We can test the api ourselves.
 
 ![alt text](resources/swagger.png) 
