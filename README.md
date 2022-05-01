@@ -15,6 +15,7 @@ Multiple Authorization in Nodejs JWT
 - Installation
 - Run
 - Test
+- Swagger
 
 ### File Structure
 Structure is base on lambda functions.  
@@ -58,6 +59,8 @@ We have to install npm dependence to run our program smoothly. pls follow as the
 ```shell
 npm install
 ```
+![alt text](resources/install.png)  
+
 ## Run
 Configuration is just for dev(local) only. we can easily execute our program in local as the following command.
 ```shell
@@ -69,4 +72,9 @@ Here is the command to run the testing.
 ```shell
 npm test
 ```
-![alt text](resources/test.png)
+![alt text](resources/test.png)  
+
+## Swagger
+W
+
+![alt text](resources/swagger.png) 
