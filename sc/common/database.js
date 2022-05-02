@@ -37,20 +37,45 @@ class Database{
             values.push(!isNaN(value)?value:'"'+tmpvalue?.replace(/"/g,'\\"')+'"');
         }
 
-        let query = `INSERT INTO ${this.tableName} (${columns.join(',')}) VALUES(${values.join(',')})`;
-        return await this.db.run(query);
+        
+        try{
+            let query = `INSERT INTO ${this.tableName} (${columns.join(',')}) VALUES(${values.join(',')})`;
+            return new Promise(async resolve=>{
+                let tmpResult =  await this.db.run(query,(err,msg)=>{
+                    if(err){
+                        resolve(false);
+                    }
+                    else{
+                        resolve(true);
+                    }
+                    
+                });
+            });
+            
+            //return tmpResult;
+        }
+        catch(e){
+            return false;
+        }
+        
     }//end insertData function    
 
     findByEmail = async(_email)=>{
         let query = `SELECT * FROM ${this.tableName} WHERE email='${_email}'`;
         return new Promise(resolve=>{
-            this.db.get(query,(err, result) => {
-                if (err) {
-                  console.log(err)
-                } else {
-                    resolve(result);
-                }
-            })
+            try{
+                this.db.get(query,(err, result) => {
+                    if (err) {
+                      console.log('ererer',err)
+                    } else {
+                        resolve(result);
+                    }
+                })
+            }
+            catch(err){
+                resolve(false)
+            }
+            
         });
         
     }
@@ -58,13 +83,19 @@ class Database{
         let query = `SELECT * FROM ${this.tableName} WHERE email='${_email}' AND password='${_password}'`;
 
         return new Promise(resolve=>{
-            this.db.get(query,(err, result) => {
-                if (err) {
-                  console.log(err)
-                } else {
-                    resolve(result);
-                }
-            })
+            try{
+                this.db.get(query,(err, result) => {
+                    if (err) {
+                      console.log('eerroorr',err)
+                    } else {
+                        resolve(result);
+                    }
+                })
+            }
+            catch(err){
+                resolve(false)
+            }
+            
         });
         
     }

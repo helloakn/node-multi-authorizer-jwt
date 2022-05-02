@@ -45,16 +45,33 @@ exports.handler = async (event,callback) => {
     else{
         let passwdHex =  md5(formData.password);
         
-        await tblUser.insertData({
-            name : formData.name,
-            email : formData.email,
-            password : passwdHex
-        });
-
-        return {
-            statusCode:StatusCodes.Ok,
-            body: {"message":"Successfully Sign Up!"}
-        };
+        try{
+            let tmpAcc = await tblUser.insertData({
+                name : formData.name,
+                email : formData.email,
+                password : passwdHex
+            });
+            console.log(tmpAcc)
+            if(tmpAcc){
+                return {
+                    statusCode:StatusCodes.Ok,
+                    body: {"message":"Successfully Sign Up!"}
+                };
+            }
+            else{
+                return {
+                    statusCode:StatusCodes.BadRequest,
+                    body: {"message":"Please check your input"}
+                };
+            }
+            
+        }
+        catch(er){
+            return {
+                statusCode:StatusCodes.BadRequest,
+                body: {"message":"Please check your input"}
+            };
+        }
     }
     
 }
